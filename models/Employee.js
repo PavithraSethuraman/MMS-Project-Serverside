@@ -9,7 +9,7 @@ const EmployeeSchema = new mongoose.Schema(
     mobile: { type: String, required: true },
     pan: { type: String, required: true },
     createBy: { type: String},
-    createDate: { type: String },
+    createDate: {type:Date},
     modifyBy: { type: String, required: false },
     modifyDate: { type: String, required: false },
   },

@@ -17,9 +17,9 @@ export const createDcm = async (req, res, next) => {
     needs:req.body.needs,
     expectedDate:req.body.expectedDate,
     remarks:req.body.remarks,
-    createDate:req.body.createDate,
+    createDate:req.body.createTime,
     createTime:req.body.createTime,
-    action:"Edit"
+   
   });
 
   try {
@@ -29,6 +29,25 @@ export const createDcm = async (req, res, next) => {
     next(err);
   }
 };
+
+
+// export const searchDcm = async (req, res, next) => {
+//   try {
+//   const startDate = req.body;
+//   // const endDate = req.body;
+//   const dateArray = [];
+//   const newDcm = await Dcm.find();
+//   let filterDoe = newDcm.filter(user => user.creatDate)
+//   // dateArray.push(filterDoe)
+// console.log(filterDoe)
+//   // const newDcm1 = await Dcm.find({createDate:{$lt:endDate}})
+//     // const filteredDate = newDcm + newDcm1
+    
+//     res.status(200).json(filterDoe);
+//   } catch (err) {
+//     next(err);
+//   }
+// };
 
 
 

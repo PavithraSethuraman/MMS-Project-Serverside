@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import employeeRoute from "./routes/employee.js";
+import searchRoute from "./routes/search.js";
 import dcmRoute from "./routes/dcm.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -38,6 +39,7 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/employee", employeeRoute);
+app.use("/api/search", searchRoute);
 app.use("/api/dcm", dcmRoute);
 
 app.use((err, req, res, next) => {
