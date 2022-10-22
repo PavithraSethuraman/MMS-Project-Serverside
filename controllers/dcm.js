@@ -8,16 +8,17 @@ export const createDcm = async (req, res, next) => {
     dcmId:dcmCollection+1,
     userId:userId,
     employeeName:req.body.employeeName,
-    customerName:req.body.customerName,
-    contactPerson:req.body.contactPerson,
-    email:req.body.email,
-    mobile:req.body.mobile,
     inTime:req.body.inTime,
+    dailyTask:req.body.dailyTask,
     outTime:req.body.outTime,
+<<<<<<< HEAD
     needs:req.body.needs,
     expectedDate:req.body.expectedDate,
     remarks:req.body.remarks,
     createDate:req.body.createTime,
+=======
+    createDate:req.body.createDate,
+>>>>>>> 47f6a39b7c5f7a56d1550705ed2692220f7302cf
     createTime:req.body.createTime,
    
   });

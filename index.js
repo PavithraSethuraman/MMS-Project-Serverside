@@ -4,17 +4,31 @@ import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import employeeRoute from "./routes/employee.js";
+<<<<<<< HEAD
 import searchRoute from "./routes/search.js";
+=======
+import companyInfoRoute from "./routes/companyInfo.js";
+import educationInfoRoute from "./routes/educationInfo.js";
+import experienceInfoRoute from "./routes/experienceInfo.js";
+import personalInfoRoute from "./routes/personalInfo.js";
+import searchRoute from "./routes/search.js";
+import projectRoute from "./routes/project.js";
+import projectTypeRoute from "./routes/projectType.js";
+import projectLocationRoute from "./routes/projectLocation.js";
+>>>>>>> 47f6a39b7c5f7a56d1550705ed2692220f7302cf
 import dcmRoute from "./routes/dcm.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+
+
+
 
 const app = express();
 dotenv.config();
 
 const connect = async () => {
   try {
-    await mongoose.connect("mongodb+srv://mms:mms@cluster0.26hvrmo.mongodb.net/marketing-management-system?retryWrites=true&w=majority");
+    await mongoose.connect("mongodb+srv://mms:mms@cluster0.26hvrmo.mongodb.net/developerlog?retryWrites=true&w=majority");
     console.log("Connected to mongoDB.");
   } catch (error) {
     throw error;
@@ -39,7 +53,18 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/employee", employeeRoute);
+<<<<<<< HEAD
 app.use("/api/search", searchRoute);
+=======
+app.use("/api/companyInfo", companyInfoRoute);
+app.use("/api/educationInfo", educationInfoRoute);
+app.use("/api/experienceInfo", experienceInfoRoute);
+app.use("/api/personalInfo", personalInfoRoute);
+app.use("/api/search", searchRoute);
+app.use("/api/project", projectRoute);
+app.use("/api/projectType", projectTypeRoute);
+app.use("/api/projectLocation", projectLocationRoute);
+>>>>>>> 47f6a39b7c5f7a56d1550705ed2692220f7302cf
 app.use("/api/dcm", dcmRoute);
 
 app.use((err, req, res, next) => {
@@ -53,7 +78,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 8000, () => {
   connect();
-  console.log("Connected to backend at 5000");
+  console.log("Connected to backend at 8000");
 });
