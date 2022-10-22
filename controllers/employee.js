@@ -16,7 +16,9 @@ export const createEmployee = async (req, res, next) => {
     email:userData.email,
     mobile:userData.mobile,
     pan:req.body.pan,
-    createDate:req.body.createDate
+    createDate:req.body.createDate,
+    secondEmail:req.body.secondEmail,
+    secondMobile:req.body.secondMobile,
   });
 
   try {

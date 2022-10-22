@@ -5,13 +5,15 @@ import {
   getDcm,
   getDcms,
   updateDcm,
-  getDcmDetailsSingleUser
+  getDcmDetailsSingleUser,
+  
 } from "../controllers/dcm.js";
 
 const router = express.Router();
 //CREATE
 router.post("/:userId", createDcm);
-
+//SEARCH
+// router.post("/search", searchDcm);
 //UPDATE
 router.put("/:id", updateDcm);
 //DELETE
